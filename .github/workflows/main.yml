@@ -29,6 +29,5 @@ jobs:
     - name: Deploy to S3
       run: |
         echo "Deploying files to S3 bucket: ${{ secrets.AWS_S3_BUCKET_NAME }}"
-        aws s3 ls
         aws s3 sync Test/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete --exact-timestamps --debug
 
