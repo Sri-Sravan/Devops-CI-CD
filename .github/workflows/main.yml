@@ -15,9 +15,9 @@ jobs:
 
     - name: Validate Files Exist
       run: |
-        test -f Devops-CI-CD/Test Code/index.html || (echo "index.html missing" && exit 1)
-        test -f Devops-CI-CD/Test Code/style.css || (echo "style.css missing" && exit 1)
-        test -f Devops-CI-CD/Test Code/script.js || (echo "script.js missing" && exit 1)
+        test -f "Devops-CI-CD/Test Code/index.html" || (echo "index.html missing" && exit 1)
+        test -f "Devops-CI-CD/Test Code/style.css" || (echo "style.css missing" && exit 1)
+        test -f "Devops-CI-CD/Test Code/script.js" || (echo "script.js missing" && exit 1)
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
